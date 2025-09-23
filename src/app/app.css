@@ -1,10 +1,15 @@
 nav {
-  background-color: #222222; /* dark grey-black */
+  background-color: #222222; 
   padding: 1rem 2rem;
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: space-between;  /* Space between links and icons */
+  align-items: center;             /* Vertically center */
   box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
 }
 
 nav a {
@@ -14,9 +19,34 @@ nav a {
   padding: 0.5rem 1rem;
   border-radius: 6px;
   user-select: none;
+  text-decoration: none;
 }
 
 nav a.router-link-active {
   background-color: #bb86fc; /* active purple background */
   color: #222;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.social-icons a {
+  color: #eee; /* same light color */
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #bb86fc; /* purple accent on hover */
+}
+
+.social-icons svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor; /* inherit color */
+  display: block;
 }
