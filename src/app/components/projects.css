@@ -19,6 +19,7 @@
   margin-bottom: 2rem;
   color: #bb86fc; /* purple accent */
   user-select: none;
+  text-align: center;
 }
 
 /* Flex container for cards */
@@ -65,11 +66,30 @@
   transform: translateY(-8px);
 }
 
-.project-card h3 {
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
   margin-bottom: 0.75rem;
+}
+
+.project-header img {
+  width: 36px;
+  height: 36px;
+  filter: brightness(80%) contrast(1.2);
+  transition: filter 0.3s ease;
+}
+
+.project-card:hover .project-header img {
+  filter: brightness(100%) contrast(1);
+}
+
+.project-card h3 {
   font-size: 1.2rem;
   color: #bb86fc;
   user-select: none;
+  margin: 0;
+  flex: 1;
 }
 
 .project-card p {

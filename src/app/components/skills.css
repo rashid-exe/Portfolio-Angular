@@ -15,30 +15,50 @@
   margin-bottom: 1.5rem;
   color: #bb86fc;
   user-select: none;
+  text-align: center; /* Center the heading */
 }
 
 .skills ul {
   list-style: none;
   padding-left: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 2rem;
+  justify-items: center; /* Center items inside each grid cell */
+  max-width: 600px; /* Optional max width for grid */
+  margin: 0 auto; /* Center the whole grid */
 }
 
 .skills ul li {
   background-color: #2a2a2a;
-  padding: 0.7rem 1.2rem;
+  padding: 1rem 1.5rem;
   border-radius: 20px;
   font-size: 1rem;
   color: #ccc;
   box-shadow: 0 4px 12px rgba(187, 134, 252, 0.2);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
   cursor: default;
   user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.skills ul li img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.6rem;
+  filter: brightness(80%) contrast(1.2);
+  transition: filter 0.3s ease;
 }
 
 .skills ul li:hover {
   background-color: #bb86fc;
   color: #222;
   box-shadow: 0 8px 24px rgba(187, 134, 252, 0.6);
+}
+
+.skills ul li:hover img {
+  filter: brightness(100%) contrast(1);
 }
