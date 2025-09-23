@@ -1,27 +1,130 @@
-.home {
+/* Wrapper to contain .home and floating logos */
+.home-wrapper {
+  position: relative;
   max-width: 900px;
   margin: 3rem auto;
   padding: 2.5rem 2rem;
-  background-color: #222222;  /* dark section background */
+  /* background-color: transparent; */
+  /* You can add background-color and border-radius here if needed */
+}
+
+.home h1 {
+  color: #bb86fc; /* purple accent */
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  user-select: none;
+  position: relative; /* if you want z-index or stacking control */
+  z-index: 10;
+}
+
+
+/* Keep your .home styles exactly as before, except remove position: relative & overflow */
+.home {
+  background-color: #222222;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(187, 134, 252, 0.3);
   color: #eee;
   font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
+  padding: 2.5rem 2rem;
+  /* Removed position: relative; overflow: hidden; */
 }
 
-.home h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #bb86fc; /* purple accent */
-  margin-bottom: 1rem;
+/* floating logos now positioned absolutely inside wrapper */
+.floating-logo {
+  position: absolute;
+  width: 48px;
+  opacity: 0.6;
+  filter: drop-shadow(0 0 4px #bb86fc) brightness(1.1);
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
   user-select: none;
+  pointer-events: none;
+  z-index: 1; /* behind the .home content */
 }
 
-.home p {
-  font-size: 1.3rem;
-  line-height: 1.6;
-  color: #ccc;
-  max-width: 700px;
-  margin: 0 auto;
+/* Position logos *around* the home card */
+.floating-logo:nth-child(2) { /* first logo */
+  top: -20px;
+  left: -40px;
+  animation-name: float1;
+  animation-duration: 6s;
+}
+.floating-logo:nth-child(3) {
+  top: 10%;
+  right: -50px;
+  animation-name: float2;
+  animation-duration: 8s;
+}
+.floating-logo:nth-child(4) {
+  bottom: 10%;
+  left: -50px;
+  animation-name: float3;
+  animation-duration: 7s;
+}
+.floating-logo:nth-child(5) {
+  bottom: -30px;
+  right: 10%;
+  animation-name: float4;
+  animation-duration: 9s;
+}
+.floating-logo:nth-child(6) {
+  top: 50%;
+  left: -60px;
+  animation-name: float5;
+  animation-duration: 5.5s;
+}
+.floating-logo:nth-child(7) {
+  top: 60%;
+  right: -60px;
+  animation-name: float6;
+  animation-duration: 7.5s;
+}
+.floating-logo:nth-child(8) {
+  bottom: 10%;
+  left: 60%;
+  animation-name: float7;
+  animation-duration: 6.5s;
+}
+.floating-logo:nth-child(9) {
+  bottom: 5%;
+  right: 60%;
+  animation-name: float8;
+  animation-duration: 8.5s;
+}
+
+/* Keyframe animations for subtle floating movement */
+@keyframes float1 {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(10px, 10px); }
+}
+@keyframes float2 {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(-10px, 15px); }
+}
+@keyframes float3 {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(15px, -10px); }
+}
+@keyframes float4 {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(-15px, -15px); }
+}
+@keyframes float5 {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(12px, 12px); }
+}
+@keyframes float6 {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(-12px, 8px); }
+}
+@keyframes float7 {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(10px, -12px); }
+}
+@keyframes float8 {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(-10px, -8px); }
 }
