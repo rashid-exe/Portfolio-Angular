@@ -1,0 +1,52 @@
+.contact-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #fff0f5; /* soft lavender */
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(219, 112, 147, 0.15); /* pale pink shadow */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #b03060; /* deep pink */
+  transition: box-shadow 0.3s ease;
+}
+
+.contact-section:hover {
+  box-shadow: 0 10px 25px rgba(219, 112, 147, 0.3);
+}
+
+.contact-section h2 {
+  color: #a02040;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  font-size: 2rem;
+}
+
+.contact-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.contact-list {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 1.1rem;
+}
+
+.contact-list li {
+  margin-bottom: 1rem;
+  color: #8b004b;
+}
+
+.contact-list a {
+  color: #b03060;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+.contact-list a:hover {
+  color: #ff69b4; /* hot pink on hover */
+  text-decoration: underline;
+  cursor: pointer;
+}

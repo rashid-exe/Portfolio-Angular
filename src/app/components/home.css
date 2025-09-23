@@ -1,0 +1,28 @@
+.home {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #f0f8ff;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 122, 204, 0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #004a99;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.home:hover {
+  box-shadow: 0 10px 25px rgba(0, 122, 204, 0.3);
+}
+
+.home h1 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.home p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
