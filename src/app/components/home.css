@@ -1,24 +1,23 @@
-/* Wrapper to contain .home and floating logos */
+
 .home-wrapper {
   position: relative;
   max-width: 900px;
   margin: 3rem auto;
   padding: 2.5rem 2rem;
-  /* background-color: transparent; */
-  /* You can add background-color and border-radius here if needed */
+  
 }
 
 .home h1 {
-  color: #bb86fc; /* purple accent */
+  color: #bb86fc; 
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
   user-select: none;
-  position: relative; /* if you want z-index or stacking control */
+  position: relative; 
   z-index: 10;
 }
 
-/* Keep your .home styles exactly as before, except remove position: relative & overflow */
+
 .home {
   background-color: #222222;
   border-radius: 12px;
@@ -27,10 +26,10 @@
   font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   padding: 2.5rem 2rem;
-  /* Removed position: relative; overflow: hidden; */
+  
 }
 
-/* floating logos now positioned absolutely inside wrapper */
+
 .floating-logo {
   position: absolute;
   width: 48px;
@@ -41,11 +40,11 @@
   animation-direction: alternate;
   user-select: none;
   pointer-events: none;
-  z-index: 1; /* behind the .home content */
+  z-index: 1; 
 }
 
-/* Position logos *around* the home card */
-.floating-logo:nth-child(2) { /* first logo */
+
+.floating-logo:nth-child(2) {
   top: -20px;
   left: -40px;
   animation-name: float1;
@@ -94,7 +93,7 @@
   animation-duration: 8.5s;
 }
 
-/* Keyframe animations for subtle floating movement */
+
 @keyframes float1 {
   0%   { transform: translate(0, 0); }
   100% { transform: translate(10px, 10px); }
@@ -128,15 +127,15 @@
   100% { transform: translate(-10px, -8px); }
 }
 
-/* Mobile-specific adjustments */
+
 @media (max-width: 480px) {
   .floating-logo {
-    width: 36px; /* smaller logos on phones */
+    width: 36px; 
     opacity: 0.7;
   }
 
-  /* Reposition all logos to stay within screen edges */
-  .floating-logo:nth-child(2) { /* first logo */
+  
+  .floating-logo:nth-child(2) { 
     top: 5px;
     left: 5px;
     animation-name: float1;

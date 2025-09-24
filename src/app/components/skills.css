@@ -15,18 +15,18 @@
   margin-bottom: 1.5rem;
   color: #bb86fc;
   user-select: none;
-  text-align: center; /* Center the heading */
+  text-align: center; 
 }
 
 .skills ul {
   list-style: none;
   padding-left: 0;
-  display: grid; /* Use grid layout */
-  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr); 
   gap: 2rem;
-  justify-items: center; /* Center items inside each grid cell */
-  max-width: 600px; /* Optional max width for grid */
-  margin: 0 auto; /* Center the whole grid */
+  justify-items: center; 
+  max-width: 600px; 
+  margin: 0 auto; 
 }
 
 .skills ul li {
@@ -63,14 +63,14 @@
   filter: brightness(100%) contrast(1);
 }
 
-/* Responsive styles for smaller screens */
+
 @media (max-width: 768px) {
   .skills ul {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    grid-template-columns: repeat(2, 1fr); 
     max-width: 400px;
   }
   .skills ul li {
-    width: 90px; /* slightly smaller */
+    width: 90px; 
   }
   .skills ul li img {
     width: 40px;
@@ -80,12 +80,12 @@
 
 @media (max-width: 480px) {
   .skills ul {
-    grid-template-columns: 1fr; /* 1 column on phones */
+    grid-template-columns: 1fr; 
     max-width: 280px;
     gap: 1.5rem;
   }
   .skills ul li {
-    width: 100%; /* full width */
+    width: 100%; 
     flex-direction: row;
     justify-content: flex-start;
     padding: 0.75rem 1rem;

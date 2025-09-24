@@ -1,4 +1,4 @@
-/* Navbar container */
+
 nav {
   background-color: #222222; 
   padding: 1rem 2rem;
@@ -7,27 +7,27 @@ nav {
   z-index: 1000;
 }
 
-/* Inner flex container */
+
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Desktop nav links */
+
 .nav-links {
   display: flex;
   gap: 2rem;
 }
 
-/* Desktop social icons */
+
 .social-icons.desktop {
   display: flex;
   gap: 1rem;
   align-items: center;
 }
 
-/* Links styles */
+
 nav a {
   color: #eee;
   font-weight: 600;
@@ -38,13 +38,13 @@ nav a {
   text-decoration: none;
 }
 
-/* Active link */
+
 nav a.router-link-active {
   background-color: #bb86fc;
   color: #222;
 }
 
-/* Social icons styling */
+
 .social-icons a {
   color: #eee;
   display: flex;
@@ -66,12 +66,12 @@ nav a.router-link-active {
   display: block;
 }
 
-/* Resume link */
+
 .resume-link {
   cursor: pointer;
 }
 
-/* Hamburger menu - hidden on desktop */
+
 .hamburger {
   display: none;
   font-size: 2.5rem;
@@ -80,7 +80,7 @@ nav a.router-link-active {
   user-select: none;
 }
 
-/* Mobile menu container */
+
 .mobile-menu {
   display: none;
   flex-direction: column;
@@ -91,14 +91,14 @@ nav a.router-link-active {
   transition: max-height 0.3s ease;
 }
 
-/* Show mobile menu when open */
+
 .mobile-menu.open {
   display: flex;
-  max-height: 1000px; /* big enough for content */
+  max-height: 1000px; 
   padding: 1rem 2rem;
 }
 
-/* Mobile nav links stacked */
+
 .nav-links-mobile {
   display: flex;
   flex-direction: column;
@@ -106,7 +106,7 @@ nav a.router-link-active {
   margin-bottom: 1rem;
 }
 
-/* Mobile nav links style */
+
 .nav-links-mobile a {
   color: #eee;
   font-weight: 600;
@@ -124,14 +124,14 @@ nav a.router-link-active {
   color: #222;
 }
 
-/* Mobile social icons container */
+
 .social-icons-mobile {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
 }
 
-/* Mobile social icons styling */
+
 .social-icons-mobile a {
   color: #eee;
   padding: 0.5rem;
@@ -143,7 +143,7 @@ nav a.router-link-active {
   color: #bb86fc;
 }
 
-/* Mobile social SVG */
+
 .social-icons-mobile svg {
   width: 28px;
   height: 28px;
@@ -151,7 +151,7 @@ nav a.router-link-active {
   display: block;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;

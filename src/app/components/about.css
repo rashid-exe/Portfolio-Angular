@@ -10,7 +10,7 @@
   display: flex;
   gap: 2rem;
   align-items: center;
-  flex-wrap: wrap; /* Responsive for small screens */
+  flex-wrap: wrap;
 }
 span{
   color:#bb86fc ;
@@ -22,7 +22,7 @@ span{
   margin-bottom: 1.5rem;
   color: #bb86fc;
   user-select: none;
-  width: 100%; /* Full width so it stays above paragraphs */
+  width: 100%; 
 }
 
 .about-content {
@@ -43,10 +43,10 @@ span{
   justify-content: center;
   align-items: center;
   max-width: 300px;
-  aspect-ratio: 1 / 1; /* Keep square */
+  aspect-ratio: 1 / 1; 
   overflow: hidden;
-  border-radius: 50%; /* Circular container */
-  background-color: #222222; /* Match card background */
+  border-radius: 50%; 
+  background-color: #222222; 
   box-shadow: 0 4px 12px rgba(187, 134, 252, 0.2);
 }
 
@@ -54,14 +54,14 @@ span{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 50%; /* Circular image */
-  background-color: #222222; /* Match background */
+  border-radius: 50%;
+  background-color: #222222; 
   user-select: none;
   pointer-events: none;
   display: block;
 }
 
-/* Responsive: stack on small screens */
+
 @media (max-width: 700px) {
   .about {
     flex-direction: column;
@@ -70,9 +70,9 @@ span{
   .about-photo {
     max-width: 200px;
     width: 200px;
-    height: 200px;       /* keep container square */
+    height: 200px;       
     margin-bottom: 1.5rem;
-    aspect-ratio: auto;  /* disable aspect-ratio to use fixed width/height */
+    aspect-ratio: auto;  
     box-shadow: 0 6px 18px rgba(187, 134, 252, 0.4);
   }
   .about-content {
@@ -83,12 +83,12 @@ span{
   }
 }
 
-/* Smaller phones */
+
 @media (max-width: 480px) {
   .about-photo {
     max-width: 150px;
     width: 150px;
-    height: 150px;       /* keep circular */
+    height: 150px;       
     margin-bottom: 1rem;
   }
 }

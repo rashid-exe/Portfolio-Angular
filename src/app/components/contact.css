@@ -57,7 +57,7 @@
   cursor: pointer;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 700px) {
   .contact-section {
     padding: 1.5rem 1.5rem;
@@ -81,11 +81,11 @@
 
   .contact-list li {
     margin-bottom: 0.8rem;
-    word-break: break-word; /* Avoid overflow on very small screens */
+    word-break: break-word; 
   }
 }
 
-/* Smaller phones */
+
 @media (max-width: 480px) {
   .contact-section {
     padding: 1rem 1rem;
