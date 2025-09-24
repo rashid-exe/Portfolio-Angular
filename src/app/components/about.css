@@ -44,6 +44,7 @@
   overflow: hidden;
   border-radius: 50%; /* Circular container */
   background-color: #222222; /* Match card background */
+  box-shadow: 0 4px 12px rgba(187, 134, 252, 0.2);
 }
 
 .about-photo img {
@@ -51,7 +52,7 @@
   height: 100%;
   object-fit: cover;
   border-radius: 50%; /* Circular image */
-  background-color: #222222; /* Match background so only sketch visible */
+  background-color: #222222; /* Match background */
   user-select: none;
   pointer-events: none;
   display: block;
@@ -65,12 +66,26 @@
   }
   .about-photo {
     max-width: 200px;
+    width: 200px;
+    height: 200px;       /* keep container square */
     margin-bottom: 1.5rem;
+    aspect-ratio: auto;  /* disable aspect-ratio to use fixed width/height */
+    box-shadow: 0 6px 18px rgba(187, 134, 252, 0.4);
   }
   .about-content {
     flex: unset;
   }
   .about h2 {
     font-size: 2rem;
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 480px) {
+  .about-photo {
+    max-width: 150px;
+    width: 150px;
+    height: 150px;       /* keep circular */
+    margin-bottom: 1rem;
   }
 }

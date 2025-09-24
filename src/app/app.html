@@ -1,33 +1,76 @@
 <nav>
-  <div class="nav-links">
-    <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-    <a routerLink="about" routerLinkActive="active">About</a>
-    <a routerLink="skills" routerLinkActive="active">Skills</a>
-    <a routerLink="projects" routerLinkActive="active">Projects</a>
-    <a routerLink="contact" routerLinkActive="active">Contact</a>
+  <div class="nav-container">
+    <div class="nav-links">
+      <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      <a routerLink="about" routerLinkActive="active">About</a>
+      <a routerLink="skills" routerLinkActive="active">Skills</a>
+      <a routerLink="projects" routerLinkActive="active">Projects</a>
+      <a routerLink="contact" routerLinkActive="active">Contact</a>
+    </div>
+
+    <div class="social-icons desktop">
+      <a href="https://github.com/rashid-exe" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+          <title>GitHub</title>
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.263.82-.582 0-.287-.01-1.045-.015-2.05-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.997.107-.775.42-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.235-3.22-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 013.003-.404c1.02.004 2.045.137 3.003.403 2.29-1.552 3.296-1.23 3.296-1.23.653 1.653.243 2.873.12 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.807 5.625-5.48 5.92.43.37.823 1.096.823 2.21 0 1.596-.015 2.88-.015 3.273 0 .322.217.698.825.58C20.565 21.796 24 17.3 24 12c0-6.63-5.373-12-12-12z"/>
+        </svg>
+      </a>
+
+      <a href="https://www.linkedin.com/in/rashid-reyaz-06210322a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+          <title>LinkedIn</title>
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.327-.024-3.037-1.851-3.037-1.854 0-2.136 1.445-2.136 2.939v5.667H9.354V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.602 0 4.268 2.372 4.268 5.455v6.286zM5.337 7.433a2.062 2.062 0 11.002-4.123 2.062 2.062 0 01-.002 4.123zM6.56 20.452H3.114V9h3.446v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.727v20.546C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.273V1.727C24 .774 23.2 0 22.225 0z"/>
+        </svg>
+      </a>
+
+      <a href="https://url.uk.m.mimecastprotect.com/s/uETrCkOV6F5nMZlU2frtGOQRX?domain=drive.google.com" download aria-label="Download Resume" class="resume-link">
+        <svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+          <title>Resume</title>
+          <path d="M6 2a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6H6zm7 1.5L18.5 9H13V3.5zM8 13h8v2H8v-2zm0 4h8v2H8v-2z"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Hamburger menu icon -->
+    <div class="hamburger" (click)="toggleNav()">
+      &#9776;
+    </div>
   </div>
 
-  <div class="social-icons">
-    <a href="https://github.com/rashid-exe" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-      <svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-        <title>GitHub</title>
-        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.263.82-.582 0-.287-.01-1.045-.015-2.05-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.997.107-.775.42-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.235-3.22-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 013.003-.404c1.02.004 2.045.137 3.003.403 2.29-1.552 3.296-1.23 3.296-1.23.653 1.653.243 2.873.12 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.807 5.625-5.48 5.92.43.37.823 1.096.823 2.21 0 1.596-.015 2.88-.015 3.273 0 .322.217.698.825.58C20.565 21.796 24 17.3 24 12c0-6.63-5.373-12-12-12z"/>
-      </svg>
-    </a>
+  <!-- Mobile dropdown menu -->
+  <div class="mobile-menu" [class.open]="navOpen">
+    <div class="nav-links-mobile">
+      <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="toggleNav()">Home</a>
+      <a routerLink="about" routerLinkActive="active" (click)="toggleNav()">About</a>
+      <a routerLink="skills" routerLinkActive="active" (click)="toggleNav()">Skills</a>
+      <a routerLink="projects" routerLinkActive="active" (click)="toggleNav()">Projects</a>
+      <a routerLink="contact" routerLinkActive="active" (click)="toggleNav()">Contact</a>
+    </div>
+    <div class="social-icons-mobile">
+      <a href="https://github.com/rashid-exe" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <!-- GitHub SVG here, same as above -->
+        <svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+          <title>GitHub</title>
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.263.82-.582 0-.287-.01-1.045-.015-2.05-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.997.107-.775.42-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.235-3.22-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 013.003-.404c1.02.004 2.045.137 3.003.403 2.29-1.552 3.296-1.23 3.296-1.23.653 1.653.243 2.873.12 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.807 5.625-5.48 5.92.43.37.823 1.096.823 2.21 0 1.596-.015 2.88-.015 3.273 0 .322.217.698.825.58C20.565 21.796 24 17.3 24 12c0-6.63-5.373-12-12-12z"/>
+        </svg>
+      </a>
 
-    <a href="https://www.linkedin.com/in/rashid-reyaz-06210322a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-      <svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-        <title>LinkedIn</title>
-        <path d="M20.447 20.452h-3.554v-5.569c0-1.327-.024-3.037-1.851-3.037-1.854 0-2.136 1.445-2.136 2.939v5.667H9.354V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.602 0 4.268 2.372 4.268 5.455v6.286zM5.337 7.433a2.062 2.062 0 11.002-4.123 2.062 2.062 0 01-.002 4.123zM6.56 20.452H3.114V9h3.446v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.727v20.546C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.273V1.727C24 .774 23.2 0 22.225 0z"/>
-      </svg>
-    </a>
+      <a href="https://www.linkedin.com/in/rashid-reyaz-06210322a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <!-- LinkedIn SVG here, same as above -->
+        <svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+          <title>LinkedIn</title>
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.327-.024-3.037-1.851-3.037-1.854 0-2.136 1.445-2.136 2.939v5.667H9.354V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.602 0 4.268 2.372 4.268 5.455v6.286zM5.337 7.433a2.062 2.062 0 11.002-4.123 2.062 2.062 0 01-.002 4.123zM6.56 20.452H3.114V9h3.446v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.727v20.546C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.273V1.727C24 .774 23.2 0 22.225 0z"/>
+        </svg>
+      </a>
 
-    <a href="https://url.uk.m.mimecastprotect.com/s/uETrCkOV6F5nMZlU2frtGOQRX?domain=drive.google.com" download aria-label="Download Resume" class="resume-link">
-      <svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-        <title>Resume</title>
-        <path d="M6 2a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6H6zm7 1.5L18.5 9H13V3.5zM8 13h8v2H8v-2zm0 4h8v2H8v-2z"/>
-      </svg>
-    </a>
+      <a href="https://url.uk.m.mimecastprotect.com/s/uETrCkOV6F5nMZlU2frtGOQRX?domain=drive.google.com" download aria-label="Download Resume" class="resume-link">
+        <!-- Resume SVG here, same as above -->
+        <svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+          <title>Resume</title>
+          <path d="M6 2a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6H6zm7 1.5L18.5 9H13V3.5zM8 13h8v2H8v-2zm0 4h8v2H8v-2z"/>
+        </svg>
+      </a>
+    </div>
   </div>
 </nav>
 

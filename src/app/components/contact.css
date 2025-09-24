@@ -24,7 +24,6 @@
   width: 32px;
   height: 32px;
   filter: invert(73%) sepia(58%) saturate(2830%) hue-rotate(246deg) brightness(93%) contrast(93%);
-  /* This filter recolors the black SVG white/purple-ish to match the theme */
   display: block;
 }
 
@@ -56,4 +55,54 @@
   color: #fff;
   text-decoration: underline;
   cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .contact-section {
+    padding: 1.5rem 1.5rem;
+    margin: 2rem auto;
+  }
+
+  .contact-section h2 {
+    font-size: 1.75rem;
+    gap: 0.5rem;
+  }
+
+  .contact-icon img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .contact-section p,
+  .contact-list {
+    font-size: 1rem;
+  }
+
+  .contact-list li {
+    margin-bottom: 0.8rem;
+    word-break: break-word; /* Avoid overflow on very small screens */
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 1rem 1rem;
+    margin: 1.5rem auto;
+  }
+
+  .contact-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-icon img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact-section p,
+  .contact-list {
+    font-size: 0.9rem;
+  }
 }
