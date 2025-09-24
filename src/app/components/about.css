@@ -12,6 +12,9 @@
   align-items: center;
   flex-wrap: wrap; /* Responsive for small screens */
 }
+span{
+  color:#bb86fc ;
+}
 
 .about h2 {
   font-weight: 700;
