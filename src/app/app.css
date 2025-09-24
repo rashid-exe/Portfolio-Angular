@@ -38,6 +38,8 @@ nav a.router-link-active {
   display: flex;
   align-items: center;
   transition: color 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 6px;
 }
 
 .social-icons a:hover {
@@ -49,4 +51,9 @@ nav a.router-link-active {
   height: 24px;
   fill: currentColor; /* inherit color */
   display: block;
+}
+
+/* Resume link specific style (matches social-icons a) */
+.resume-link {
+  cursor: pointer;
 }

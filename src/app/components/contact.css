@@ -10,10 +10,22 @@
 }
 
 .contact-section h2 {
+  display: flex;
+  align-items: center;
   font-weight: 700;
   font-size: 2rem;
   margin-bottom: 1.25rem;
   color: #bb86fc;
+  user-select: none;
+  gap: 0.75rem;
+}
+
+.contact-icon img {
+  width: 32px;
+  height: 32px;
+  filter: invert(73%) sepia(58%) saturate(2830%) hue-rotate(246deg) brightness(93%) contrast(93%);
+  /* This filter recolors the black SVG white/purple-ish to match the theme */
+  display: block;
 }
 
 .contact-section p {
